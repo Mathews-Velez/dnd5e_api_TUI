@@ -12,3 +12,8 @@ r = requests.get(url = URL, params = PARAMS)
 data = r.json()
 
 print("Got %s results back"%data['count'])
+
+#iterate through each result and display it's name
+for i in data['results']:
+    print(f"{data['results'].index(i)} ---"+i['name'])
+
