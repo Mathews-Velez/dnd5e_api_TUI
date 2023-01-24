@@ -1,5 +1,5 @@
 from api_req_handler import api_req
-
+from json_data_formatter import format_data
 
 def main():
     # display initial welcome message
@@ -17,12 +17,12 @@ def main():
 
     data = api_req(endpoint)
 
-    print (data)
+    format_data(data, endpoint)
     
 def show_menu(options):
        for i in range(len(options)):
            print(f"{i} --- {options[i]}")
        return input("Endpoint: ")
-       
-
+def monster_menu():
+   print()
 main()
